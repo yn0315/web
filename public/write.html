@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <!-- 순서 중요 -->
+   <!-- reset.css -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+   <!-- https://fontawesome.com/ -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+
+   <!-- custom css -->
+   <link rel="stylesheet" href="./css/main.css">
+
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+   <!-- body 대신 여기에 공통설정 -->
+   <div class="wrapper">
+
+      <!-- header -->
+      <header>
+         <div class="inner-header clearfix">
+            <h1 class="logo">
+               <a href="/index.html">
+                  <img src="img/logo3.png" alt="회사로고"> </a>
+            </h1>
+            <nav class="gnb">
+               <ul>
+                  <li><a href="http://yn0315.shop">HOME</a></li>
+                  <li><a href="http://yn0315.shop#aboutUs">ABOUT US</a></li>
+                  <li><a href="http://yn0315.shop#partner">PARTNERS</a></li>
+                  <li><a href="http://yn0315.shop#contact">CONTACT</a></li>
+                  <li><a href="/board">BOARD</a></li>
+                  <li><a href="/map">MAP</a></li>
+               </ul>
+            </nav>
+
+            <!-- 햄버거 버튼 -->
+            <nav class="gnb-mobile"><a href="#"><i class="fas fa-bars"></i></a></nav>
+         </div>
+      </header>
+      <!-- section.board -->
+
+
+
+      <!-- table -->
+
+      <section style="padding-top: 10%; padding-bottom: 10%;">
+         <div class="write-outer" style="text-align: center;">
+
+         <div class="write-container" style="display: inline-block; margin: auto;">
+         
+
+            <form class="write-form" action="/board/write" method="post">
+               <div class="input-box" style="text-align: left; width: 900px; height: 500px; border: 1px solid black; padding-left: 2%; padding-top: 5%;">
+                  <div style="padding-bottom: 2%;">
+                  <label >작성자 <input id="writer" class="form-control" type="text" name="writer" style=" border-bottom: 1px solid #000; width: 180px;" ><br>
+                  </label>
+               </div>
+               <div style="padding-bottom: 2%;">
+                  <label>
+                     제목 <input id="title" class="form-control" type="text" name="title" style="border-bottom: 1px solid #000; width: 195px;"><br>
+                  </label>
+               </div>
+                  <p tyle="padding-bottom: 2%;">내용</p><br>
+                  <textarea id="content" class="form-control" name="content" style="width: 880px;height: 350px;"></textarea>
+                  <br>
+
+               </div>
+               <button id="submit" type="submit" style="display: inline-block; float: right; margin-top: 2%;
+               width: 100px;
+                        height: 30px;
+                        margin-top: 15px;
+                        background-color: black;
+                        color: white;
+                        font-weight: normal;
+                        font-size: 16px;
+                        letter-spacing: 2px;">등록</button>
+            </form>
+            <a style="display: inline-block; float: left; padding-top: 2%; margin-left: 1%;"href="/board.html">목록보기</a>
+         </div>
+      </div>
+<script>
+      function value() {
+         var val = false
+         $('#writer').val() == null || $('#name').val() == 'undefined' || $('#name').val() == '' ? alert('이름을 입력해주세요.') :
+             $('#title').val() == null || $('#telno').val() == 'undefined' || $('#telno').val() == '' ? alert('연락처를 입력해주세요.') :
+                 $('#content').val() == null || $('#email').val() == 'undefined' || $('#email').val() == '' ? alert('email 을 입력해주세요.') : true;
+         return val;
+     }
+     $('#submit').on('click', function () {
+         if (value()) {
+
+             var param = {
+                 "writer": $('#writer').val(),
+                 "title": $('#title').val(),
+                 "content": $('#content').val()
+             }
+             console.log(param);
+             var rvalue = new Array();
+             $.ajax({
+                 type: "post",
+                 url: "/board/write",
+                 data: param,
+                 async: false,
+                 success: function(data){
+                     console.log(data);
+                     alert('게시글이 등록되었습니다.');
+                 },
+                 error: function (e) {
+                     alert(e.reponseText);
+                 }
+             });
+
+
+         }
+
+     })
+   </script>
+
+      </section>
+
+
+      <!-- footer -->
+      <footer>
+         <div class="inner clearfix">
+            <h2 class="ft-logo"><img src="img/logo3.png" alt=""></h2>
+            <ul class="address">
+               <li>대전광역시 서구 둔산동</li>
+               <li class="en">Copyright 2023.</li>
+            </ul>
+            <ul class="list">
+               <li><a href="#">온라인 상담시스템</a></li>
+               <li><a href="#">고객문의</a></li>
+               <li><a href="#">공지사항</a></li>
+               <li><a href="#">개인정보처리방침</a></li>
+               <li><a href="#">FAMILY SITE</a></li>
+            </ul>
+         </div>
+      </footer>
+      <!-- //footer -->
+   </div>
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 순서 중요 -->
+    <!-- reset.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <!-- body 대신 여기에 공통설정 -->
+    <div class="wrapper">
+
+        <!-- header -->
+        <header>
+            <div class="inner-header clearfix">
+                <h1 class="logo">
+                    <a href="/index.html">
+                        <img src="img/logo3.png" alt="회사로고"> </a>
+                </h1>
+                <nav class="gnb">
+                    <ul>
+                        <li><a href="http://yn0315.shop">HOME</a></li>
+                        <li><a href="#aboutUs">ABOUT US</a></li>
+                        <li><a href="#partner">PARTNERS</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                        <li><a href="/board">BOARD</a></li>
+                        <li><a href="/map">MAP</a></li>
+                    </ul>
+                </nav>
+
+                <!-- 햄버거 버튼 -->
+                <nav class="gnb-mobile"><a href="#"><i class="fas fa-bars"></i></a></nav>
+            </div>
+            <script>
+                // function mapPage() {
+                //     // location.href = "/map";
+                //     $.ajax({
+                //             type: "get",
+                //             url: "/map",
+                //             data: param,
+                //             async: false,
+                //             success: function(data){
+                //                 console.log(data);
+                //                 alert('map');
+                //             },
+                //             error: function (e) {
+                //                 alert(e.reponseText);
+                //             }
+                //         });
+
+
+                // }
+
+                // function openMap() {
+                //     $.ajax({
+                //             type: "get",
+                //             url: "/map",
+                //             async: false,
+                //             success: function(){
+                //                 console.log();
+                //                 alert('map');
+                //             },
+                //             error: function (e) {
+                //                 alert(e.reponseText);
+                //             }
+                //         });
+
+                // }
+            </script>
+        </header>
+        <!-- section.main -->
+        <section class="main">
+            <div class="main-title">
+                <h2 class="en">THE MOST CREATIVE THINK</h2>
+                <p>I'm fine................</p>
+            </div>
+        </section>
+        <!-- //section.main -->
+
+        <!-- section.about -->
+        <section id="aboutUs" class="about">
+            <div class="title en">
+                <h2>ABOUT US<span>.</span></h2>
+                <p>대한민국 대표 IT기업, <br class="mo"> YN company를 소개합니다.</p>
+            </div>
+
+            <ul class="clearfix">
+                <li>
+                    <a href="#">
+                        <div class="img-box">
+                            <img src="img/moon.jpg" alt="달">
+                        </div>
+                        <div class="text">
+                            <h3>회사소개</h3>
+                            <p>존재 이유를 찾아주는 기업</p>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="img-box"><img src="img/orangeNyang.jpg" alt="오렌지"></div>
+                        <div class="text">
+                            <h3>연구소</h3>
+                            <p>기술 개발에 전념해 오고있습니다.</p>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="img-box"><img src="img/grayCat.jpg" alt="그레이"></div>
+                        <div class="text">
+                            <h3>투자정보</h3>
+                            <p>YN company의 주요 협력사를 제공합니다.</p>
+
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+        <!-- //section.about -->
+
+        <!-- section.innovation -->
+        <section id="partner" class="innovation">
+            <div class="partner">
+                <h3>PARTNERS</h3>
+                <ul class="animate" data-animate="fadeInRight" data-duration="1s">
+                    <li><img src="img/partner1.png" alt=""></li>
+                    <li><img src="img/partner2.png" alt=""></li>
+                    <li><img src="img/partner3.png" alt=""></li>
+                    <li><img src="img/partner4.png" alt=""></li>
+                    <li><img src="img/partner5.png" alt=""></li>
+                    <li><img src="img/partner6.png" alt=""></li>
+                    <li><img src="img/partner7.png" alt=""></li>
+                    <li><img src="img/partner8.png" alt=""></li>
+                </ul>
+            </div>
+        </section>
+        <!-- //section.innovation -->
+
+        <!-- section.me -->
+        <section id="contact" class="me">
+            <div class="contact">
+                <h3>CONTACT</h3>
+                <div class="request_box">
+                    <form id="request_form" name="contact_form" action="/submit" method="post">
+                        <div class="name_tel_companyname" style="">
+                            <div id="contactNameBox">
+                                <label>이름* <input class="contactForm" id="name" type="text" name="name"
+                                        placeholder="홍길동"></label>
+                            </div>
+                            <div id="contactTelBox">
+                                <label>연락처* <input class="contactForm" id="telno" type="text" name="tel"
+                                        placeholder="010-xxxx-xxxx"></label>
+                            </div>
+                            <div id="contactCompanyNameBox">
+                                <label>회사명<input class="contactForm" id="companyName" type="text" name="companyName"
+                                        placeholder="Studio"></label>
+                            </div>
+                        </div>
+                        <div class="email_budget" style="">
+                            <div id="contactEmailBox">
+                                <label>이메일* <input class="contactForm" id="email" type="email" name="email"
+                                        placeholder="aaa@naver.com"></label>
+                            </div>
+                            <div id="contactBudgetBox">
+                                <label>예산 <input class="contactForm" id="budget" type="text" name="budget"
+                                        placeholder="10,000,000"></label>
+                            </div>
+                        </div>
+                        <div class="msgArea" style="">
+                            <div id="contactMsgBox">
+                                <label>문의 내용*
+                                    <textarea class="contactForm" id="message" name="message"
+                                        style="border: 1px solid #e0e0e0;"
+                                        placeholder=" 궁금하신 사항이나 문의하실 내용을 적어주세요"></textarea>
+                                </label>
+                            </div>
+                        </div>
+                        <div style="text-align: center;">
+                            <button id="submit" type="submit" name="submit">SEND</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+            <script>
+
+                // function value() {
+                //     var val = false
+                //     $('#name').val() == null || $('#name').val() == 'undefined' || $('#name').val() == '' ? alert('이름을 입력해주세요.') :
+                //         $('#telno').val() == null || $('#telno').val() == 'undefined' || $('#telno').val() == '' ? alert('연락처를 입력해주세요.') :
+                //             $('#email').val() == null || $('#email').val() == 'undefined' || $('#email').val() == '' ? alert('email 을 입력해주세요.') :
+                //                 $('#message').val() == null || $('#message').val() == 'undefined' || $('#message').val() == '' ? alert('메시지를 입력해주세요.') : val = true;
+                //     return val;
+                // }
+                // $('#submit').on('click', function () {
+                //     if (value()) {
+
+                //         var param = {
+                //             "name": $('#name').val(),
+                //             "telno": $('#telno').val(),
+                //             "companyName": $('#companyName').val() == null || $('#companyName').val() == 'undefined' || $('#companyName').val() == '' ? '' : $('#companyName').val(),
+                //             "email": $('#email').val(),
+                //             "budget": $('#budget').val() == null || $('#budget').val() == 'undefined' || $('#budget').val() == '' ? '' : $('#budget').val(),
+                //             "message": $('#message').val().replace(/(?:\r\n|\r|\n)/g, '<br />')
+                //         }
+                //         console.log(param);
+                //         var rvalue = new Array();
+                //         $.ajax({
+                //             type: "post",
+                //             url: "/submit",
+                //             data: param,
+                //             async: false,
+                //             success: function(data){
+                //                 console.log(data);
+                //                 alert('메일이 발송되었습니다.');
+                //             },
+                //             error: function (e) {
+                //                 alert(e.reponseText);
+                //             }
+                //         });
+
+
+                //     }
+
+                // })
+
+
+            </script>
+
+
+        </section>
+        <!-- //section.me -->
+
+        <!-- footer -->
+        <footer>
+            <div class="inner clearfix">
+                <h2 class="ft-logo"><img src="img/logo3.png" alt=""></h2>
+                <ul class="address">
+                    <li>대전광역시 서구 둔산동</li>
+                    <li class="en">Copyright 2023.</li>
+                </ul>
+                <ul class="list">
+                    <li><a href="#">온라인 상담시스템</a></li>
+                    <li><a href="#">고객문의</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">FAMILY SITE</a></li>
+                </ul>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

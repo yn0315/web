@@ -1,0 +1,1205 @@
+/* 웹 폰트 불러오기 */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* reset */
+a {
+    color: inherit;
+    text-decoration: none;
+
+}
+
+button,
+input {
+    outline: none;
+    border: none;
+    color: #000;
+}
+
+/* common */
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.wrapper {
+    font: 14px "Noto Sans KR"sans-serif;
+}
+
+/* 영어폰트에는 따로 클래스 적용해서 */
+.en {
+    font-family: "Exo 2";
+}
+
+/* 모바일이 아니면 줄개행을 안함 */
+br.mo {
+    display: none;
+}
+
+/* 모바일, 태블릿 아니면 햄버거버튼 숨기기 */
+header .inner-header .gnb-mobile {
+    display: none;
+}
+
+/* header 스타일 */
+header {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    z-index: 1000;
+}
+
+header .inner-header {
+    width: 84%;
+    margin: 0 auto;
+}
+
+header .inner-header h1.logo {
+    float: left;
+    width: 100px;
+    margin-top: 20px;
+
+}
+
+/* 로고 이미지 줄이려면 가로만 원하는 사이즈, 세로는 auto로(부모에게 적용)
+박스 안에 있는 이미지를 가로 100% */
+header .inner-header h1.logo img {
+    width: 100%;
+}
+
+header .inner-header nav.gnb {
+    float: left;
+    margin-left: 400px;
+}
+
+header .inner-header nav.gnb li {
+    
+    float: left;
+    margin-right: 80px;
+}
+
+header .inner-header nav.gnb li a {
+    color: #fff;
+    font-size: 16px;
+    display: block;
+}
+
+header .inner-header nav.gnb li a:hover {
+    color: rgb(252, 128, 46);
+}
+
+header .inner-header nav.tnb {
+    float: right;
+}
+
+header .inner-header nav.tnb li {
+    float: left;
+    margin-right: 25px;
+}
+
+header .inner-header nav.tnb li a {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+
+header .inner-header nav.tnb li:last-child a {
+    display: block;
+    width: 105px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    /* 제품검색을 둘러싸고 있는 도형의 높이가 너무 커서 줄이기 위해 line-hight  */
+    line-height: 2;
+    margin-top: 33px;
+}
+
+header .inner-header nav.tnb li:last-child a:hover {
+    color: #ff8342;
+    background: #fff;
+}
+
+/* 두 가지를 쓰려면 처음부터 다 써야됨 */
+header .inner-header nav.tnb li:first-child a i,
+header .inner-header nav.tnb li:nth-child(2) a i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+header .inner-header nav.tnb li:last-child a i {
+    margin-left: 5px;
+}
+
+/* end header */
+
+/* section main 스타일 */
+section.main {
+    background: url('../img/cat.jpg') no-repeat center/cover fixed;
+    height: 100vh;
+}
+
+section.main .main-title {
+    /* 박스를 화면 정중앙에 배치 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    animation: uprising 1s;
+}
+
+@keyframes uprising {
+    0% {
+        top: 60%;
+        opacity: 0;
+    }
+
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+section.main .main-title h2 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+section.main .main-title p {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+section.main .main-title .view {
+    display: block;
+    font-size: 15px;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    width: 180px;
+    padding: 8px 0;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+section.main .main-title .view::after {
+    content: '';
+    width: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    /* background: yellow; */
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+}
+
+section.main .main-title .view:hover::after {
+    width: 100%;
+}
+
+/* section about 스타일 */
+
+section.about {
+    background: #fff;
+    padding: 120px 0;
+}
+
+section .title {
+    color: #000;
+    text-align: center;
+}
+
+section .title h2 {
+    font-size: 45px;
+    margin-bottom: 5px;
+}
+
+section .title p {
+    font-size: 18px;
+    color: #555;
+}
+
+section.about ul {
+    /* background: tomato; */
+    width: 74%;
+    margin: 30px auto;
+    border-bottom: 1px solid #ddd;
+}
+
+section.about ul li {
+    float: left;
+    width: 33.3333333%;
+}
+
+section.about ul li a .img-box {
+    overflow: hidden;
+}
+
+section.about ul li .img-box img {
+    width: 100%;
+    transition: 0.7s;
+}
+
+section.about ul li a:hover .img-box img {
+    transform: scale(1.2);
+}
+
+section.about ul li a .text {
+    padding: 25px;
+
+}
+
+section.about ul li a .text h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+section.about ul li a .text p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+section.about ul li a .text p.more {
+    font-weight: 700;
+    /* 일괄대문자 변환 lowercase: 일괄소문자*/
+    text-transform: uppercase;
+    padding-left: 40px;
+    position: relative;
+}
+
+section.about ul li a .text p.more::before {
+    content: '\f30b';
+    font-family: 'Font awesome 5 Free';
+    font-size: 15px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    background: #ff8342;
+    border-radius: 50%;
+    /* display: block;
+    position이나 float 속성을 걸면 자동으로 블록이 됨 */
+    position: absolute;
+    left: 0;
+    top: -6px;
+}
+
+
+
+/* section partner 스타일 */
+.partner {
+    width: 1170px;
+    margin: 170px auto 100px;
+    color: #fff;
+    text-align: center;
+}
+
+.partner .animate {
+    animation: fadeInRight 1s;
+
+}
+
+@keyframes fadeInRight {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+
+    50% {
+        width: 50%;
+        opacity: 0.5;
+    }
+
+    100% {
+        width: 100%;
+        opacity: 1;
+
+    }
+}
+
+.partner h3 {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 10%;
+
+}
+
+.partner ul {
+    /* background: tomato; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 150px);
+
+    /* 각 요소들 위치 변경 */
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.partner ul li img {
+    /* display: inline-block; */
+    opacity: 0.4;
+    transition: 0.3s;
+}
+
+.partner ul li:hover img {
+    opacity: 1;
+}
+
+
+
+/* section innovation 스타일 */
+
+section.innovation {
+    background: #000;
+    margin-bottom: 150px;
+    height: 924px;
+    margin-top: 10%;
+}
+
+section.innovation .partner {
+    padding-top: 10%;
+}
+
+
+section.innovation .img-box {
+    width: 74%;
+    height: 540px;
+    background: url('../img/product_1.jpg') no-repeat center/cover;
+    margin: 50px auto 0;
+    position: relative;
+}
+
+section.innovation .img-box .inner {
+    background: #3a3c4e;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+}
+
+section.innovation .img-box .inner h3 {
+    background: #fff;
+    font-size: 18px;
+    padding: 25px 45px;
+    box-sizing: border-box;
+}
+
+section.innovation .img-box .inner .bottom {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 35px 85px;
+    box-sizing: border-box;
+}
+
+section.innovation .img-box .inner .bottom p {
+    float: left;
+    width: 70%;
+}
+
+section.innovation .img-box .inner .bottom a {
+    float: right;
+    background: #ff8342;
+    border-radius: 50px;
+    padding: 7px 30px;
+
+}
+
+section.innovation .img-box .inner .bottom a:hover {
+    background: #f86010;
+}
+
+/* section me 스타일 */
+
+section.me {
+    margin-bottom: 150px;
+}
+
+section.me .contact {
+    height: 924px;
+    text-align: center;
+    padding-top: 10%;
+}
+
+section.me .contact h3 {
+    color: #000;
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 5%
+}
+
+section .list {
+    width: 74%;
+    margin: 50px auto;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+}
+
+section .list>li {
+    padding: 20px;
+}
+
+section .list>li:first-child {
+    border-bottom: 1px solid #ddd;
+}
+
+section .list>li h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+section .list>li h3 span {
+    color: #ff8342;
+    position: absolute;
+    left: -24px;
+}
+
+section .list>li p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+section .list>li a.more {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+section .list>li a.more span {
+    color: #ff8342;
+    margin-left: 3px;
+    font-size: 14px;
+}
+
+section .list li p:first-child {
+    font-size: 8px;
+    line-height: 1.6;
+    padding: 10px 30px;
+    float: right;
+    width: 80%;
+}
+
+section .me ul .in {
+    margin-bottom: 30px;
+}
+
+section .list li .in em {
+    float: left;
+    width: 12%;
+    font-weight: 700;
+}
+
+section .list li .in p {
+    float: left;
+    width: 88%;
+    position: relative;
+}
+
+section .list li .in p::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #ff8342;
+    position: absolute;
+    left: -40px;
+    top: 10px;
+}
+
+section #incruit-btn {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background: #ff8342;
+    border-radius: 50px;
+    margin: 0 auto;
+    display: block;
+    /* 버튼리셋 */
+    /* outline: none;
+    border: none; */
+    padding: 10px;
+    width: 280px;
+    cursor: pointer;
+}
+
+/* contact */
+
+section.me .contact{
+    text-align: center;
+    
+}
+
+section.me .contact .request_box {
+    display: inline-block;
+    width: 1120px;
+    height: 500px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 16px;
+
+
+}
+
+textarea.contactForm {
+    height: 350px;
+    width: 99%;
+    border: 1px solid black;
+    resize: vertical;
+    margin-top: 1%;
+}
+
+#contactNameBox {
+    position: relative;
+    float: left;
+    width: 30%;
+    margin-top: 1%;
+}
+
+#contactTelBox {
+    position: relative;
+    float: left;
+    width: 30%;
+    margin-top: 1%;
+}
+
+#contactCompanyNameBox {
+    position: relative;
+    float: left;
+    width: 40%;
+    margin-top: 1%;
+}
+
+#contactEmailBox {
+    position: relative;
+    float: left;
+    width: 50%;
+}
+
+#contactBudgetBox {
+    position: relative;
+    float: left;
+    width: 50%;
+}
+
+.name_tel_companyname {
+    overflow: hidden;
+}
+
+.email_budget {
+    clear: both;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.msgArea {
+    clear: both;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#submit {
+    border: 1px solid black;
+    width: 100px;
+    height: 30px;
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+#request_form textarea,
+#request_form input[type="text"],
+#request_form input[type="email"] {
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 0;
+
+}
+
+
+/* footer스타일 */
+
+footer {
+    border-top: 1px solid #999;
+    padding: 30px 0;
+}
+
+footer .inner {
+    width: 84%;
+    margin: 0 auto;
+}
+
+footer .inner .ft-logo {
+    width: 100px;
+    float: left;
+    margin-right: 30px;
+}
+
+footer .inner .ft-logo img {
+    width: 100%;
+}
+
+footer .inner .address {
+    float: left;
+    margin-left: 100px;
+    margin-top: 27px;
+}
+
+footer .address li:first-child {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+footer .address li:last-child {
+    color: #999;
+}
+
+footer .inner .list {
+    float: right;
+    margin-top: 30px;
+}
+
+footer .list li {
+    float: left;
+    margin-left: 80px;
+}
+
+footer .list li a:hover {
+    color: #ff8342;
+    text-decoration: underline;
+}
+
+footer .list li:last-child {
+    font-weight: 700;
+}
+
+/* 반응형 작업 */
+/* 노트북 해상도 (1599px) */
+@media screen and (max-width: 1599px) {
+    header {
+        width: 1500px;
+
+    }
+    header .inner-header {
+        width: 95%;
+    }
+
+    header .inner-header nav.gnb {
+        float: left;
+        margin-left: 200px;
+    }
+
+    header .inner-header nav.gnb li {
+        margin-right: 60px;
+    }
+
+    header .inner-header nav.tnb li {
+        margin-right: 10px;
+    }
+
+    section.about ul,
+    section.innovation .img-box,
+    section.me ul.list {
+        width: 95%;
+    }
+
+    footer .inner {
+        width: 95%;
+    }
+
+    footer .inner .list li {
+        margin-left: 20px;
+    }
+}
+
+/* 태블릿 1024px 해상도 (아이패드 프로) */
+@media screen and (max-width: 1024px) {
+
+    header {
+        width: 1000px;
+
+    }
+    header .inner-header {
+        width: 90%;
+    }
+    header .inner-header nav.gnb,
+    header .inner-header nav.tnb {
+        display: none;
+    }
+
+    header .inner-header .gnb-mobile {
+        float: right;
+        font-size: 40px;
+        color: #fff;
+        display: block;
+       
+    }
+
+    section.main .main-title {
+        width: 80%;
+    }
+
+    .partner ul {
+        /* background: tomato; */
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: repeat(3, 150px);
+    
+        /* 각 요소들 위치 변경 */
+        justify-items: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    section.me ul.in li {
+        margin-bottom: 0;
+    }
+
+    section.me ul.in li p {
+        margin-bottom: 10px;
+    }
+
+    section .list li .in p::before {
+        left: -20px;
+    }
+
+    section.me .contact .request_box {
+        display: inline-block;
+        width: 900px;
+        height: 500px;
+        border: 1px solid black;
+        text-align: center;
+        font-size: 16px;
+    
+    
+    }
+
+    footer .inner .list {
+        display: none;
+    }
+
+    footer .inner .ft-logo {
+        margin-top: 15px;
+    }
+}
+
+/* 태블릿 768px 해상도 (아이패드) */
+@media screen and (max-width: 768px) {
+
+    section.main .main-title h2 {
+        font-size: 40px;
+    }
+
+    section.main .main-title p {
+        font-size: 20px;
+    }
+
+    section.about {
+        padding: 80px 0;
+    }
+
+    section.about ul li {
+        float: none;
+        width: 100%;
+    }
+
+    section.about ul li a .img-box {
+        height: 400px;
+    }
+    
+
+    section.innovation .img-box .inner .bottom {
+        padding: 30px;
+    }
+
+    section.innovation .img-box .inner .bottom p {
+        float: none;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    section.innovation .img-box .inner .bottom a {
+        float: none;
+        display: block;
+        width: 100px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .partner ul {
+        /* background: tomato; */
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(4, 150px);
+    
+        /* 각 요소들 위치 변경 */
+        justify-items: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    section.me {
+        padding: 50px 0;
+    }
+
+    section.me ul li p {
+        font-size: 13px;
+    }
+
+    section.me ul.in li em {
+        float: left;
+        width: 12%;
+        font-size: 13px;
+        margin-bottom: 5px;
+    
+    }
+
+    section.me ul.in li p {
+        width: 88%;
+        float: left;
+    }
+
+    section .list li .in p::before {
+        left: -10px;
+    }
+
+    section.me .contact .request_box {
+        display: inline-block;
+        width: 600px;
+        height: 500px;
+        border: 1px solid black;
+        text-align: center;
+        font-size: 16px;
+    
+    
+    }
+
+    footer .inner .ft-logo {
+        float: none;
+        width: 100px;
+        margin: 0 auto;
+    }
+
+    footer .inner .address {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+/* 모바일 414px 해상도 (아이폰 678 plus) */
+@media screen and (max-width: 414px) {
+
+    header {
+        height: 60px;
+        line-height: 60px;
+    }
+
+    header .inner-header .logo {
+        width: 100px;
+        position: absolute;
+        top: -20px;
+        margin-left: 5%;
+
+    }
+
+    section.main .main-title h2 {
+        font-size: 30px;
+    }
+
+    section.main .main-title p {
+        font-size: 16px;
+    }
+
+    section.main .main-title .view {
+        width: 150px;
+        font-size: 14px;
+    }
+
+    section .title h2 {
+        font-size: 25px;
+    }
+
+    section .title p {
+        font-size: 14px;
+    }
+
+    section.about {
+        padding: 30px 0;
+    }
+
+    /* 카드처럼 디자인 */
+    section.about ul li {
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        background: #fafafa;
+        margin-bottom: 10px;
+    }
+
+    section.about ul li a .img-box {
+        height: 300px;
+    }
+
+    section.innovation .img-box {
+        height: 400px;
+    }
+
+    .partner ul {
+        /* background: tomato; */
+        display: grid;
+        grid-template-columns: repeat(1, 200px);
+        grid-template-rows: repeat(8, 100px);
+    
+        /* 각 요소들 위치 변경 */
+        justify-items: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    section.me {
+        margin-bottom: 50px;
+    }
+
+    section.me ul.list>li {
+        padding-left: 20px;
+    }
+
+    section.me ul.list>li p {
+        text-align: justify;
+    }
+
+    section.me ul.in li em {
+        float: none;
+    }
+
+    section.me ul.in li p {
+        float: none;
+        width: 100%;
+    }
+
+    section.me .contact .request_box {
+        display: inline-block;
+        width: 400px;
+        height: 500px;
+        border: 1px solid black;
+        text-align: center;
+        font-size: 16px;
+    
+    
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+}
+
+/* 모바일 320px 해상도 (아이폰5 / SE) */
+@media screen and (max-width: 320px) {
+
+    br.mo {
+        display: block;
+    }
+
+    .wrap {
+        min-width: 320px;
+    }
+
+    .wrapper {
+        min-width: 320px;
+    }
+
+    header .inner-header .logo {
+        width: 100px;
+        height: auto;
+        margin-left: 5%;
+    }
+
+    header .inner-header .gnb-mobile {
+        font-size: 32px;
+        margin-right: 15px;
+        position: absolute;
+        right: 0;
+        bottom: 2px;
+    }
+
+    section.main .main-title h2 {
+        font-size: 22px;
+    }
+
+    section.main .main-title p {
+        font-size: 14px;
+    }
+
+    section.about ul li a .img-box {
+        height: 200px;
+    }
+
+    section.about ul li a .text {
+        padding: 15px;
+    }
+
+    section.about ul li a .text h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    section.about ul li a .text p {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    section.about ul li a .text p.more::before {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+
+    section.innovation .img-box {
+        height: 300px;
+    }
+
+    .partner ul {
+        /* background: tomato; */
+        display: grid;
+        grid-template-columns: repeat(1, 300px);
+        grid-template-rows: repeat(8, 150px);
+    
+        /* 각 요소들 위치 변경 */
+        justify-items: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    section.me .contact .request_box {
+        display: inline-block;
+        width: 300px;
+        height: 500px;
+        border: 1px solid black;
+        text-align: center;
+        font-size: 16px;
+    
+    
+    }
+
+    
+    .map {
+        position: relative;
+        text-align: center;
+    }
+    .outerMap {
+        text-align: center;
+    }
+
+    .iframeMap {
+        display: inline-block;
+        margin: auto;
+        text-align: center;
+    }
+
+    .iframeMap iframe{
+        display: inline-block;
+        margin: auto;
+    }
+
+    .table {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .table .table_inner_box {
+        float: left;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    
+    .table .table_inner_box table{
+        margin-left:auto; 
+        margin-right:auto;
+    }
+    table{ border: 1px solid black; }  /*이중선 제거*/
+    th,td{
+         width: 100px;
+         height: 50px;
+         text-align: center;
+         border: 1px solid #000;
+         
+         vertical-align: top;	/* 위 */
+         vertical-align: bottom;   /* 아래 */
+         vertical-align: middle;   /* 가운데 */
+       }
+
+    .write {
+        background: #000;
+    }
+
+
+    .fileDrop {
+        width: 800px;
+        height: 400px;
+        border: 1px dashed gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+     }
+ 
+     .uploaded-list {
+        display: flex;
+     }
+ 
+     .uploaded-list a {
+        display: flex;
+        flex-direction: column;
+     }
+ 
+     .uploaded-list a img {
+        width: 100px;
+        height: 100px;
+        display: block;
+     }
+ 
+     .uploaded-list .thumbnail-box {
+        display: flex;
+     }
+ 
+     #go {
+           color: inherit;
+     }
+ 
+     #go:hover {
+        color: rgb(221, 29, 29);
+     }
+
+     .write-outer {
+        display: inline-block;
+        margin: auto;
+        padding-bottom: 10%;
+
+     }
+ 
+     .write-container {
+         display: inline-block;
+         margin: auto;
+         text-align: center;
+         
+     }
+    
+
+
+}
