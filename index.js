@@ -18,6 +18,14 @@ const { Post } = require('./routes');
 
 app.use((morgan('dev')));
 
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, function () {
+    console.log('server Start.')
+
+})
+
+
 // const conn = {  // mysql 접속 설정
 //     host: 'localhost',
 //     port: '3306',
@@ -28,13 +36,22 @@ app.use((morgan('dev')));
 
 // http.createServer(options, app).listen(80);
 
+
 const conn = {  // mysql 접속 설정
-    host: '13.125.66.227',
+    host: '0.0.0.0',
     port: 3306,
     // user: 'root',
     // password: '0000',
     // database: 'my_db'
 };
+
+// const conn = {  // mysql 접속 설정
+//     host: '13.125.66.227',
+//     port: 3306,
+//     // user: 'root',
+//     // password: '0000',
+//     // database: 'my_db'
+// };
 
 
 // var connection = mysql.createConnection(conn); // DB 커넥션 생성
@@ -433,10 +450,6 @@ app.get('/article/:title', function (req, res) {
 
 // app.use('/',router);
 
-app.listen(3000, function () {
-    console.log('server Start.')
-
-})
 
 
 
