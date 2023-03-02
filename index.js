@@ -28,13 +28,13 @@ app.use((morgan('dev')));
 
 // http.createServer(options, app).listen(80);
 
-// const conn = {  // mysql 접속 설정
-//     host: '13.125.66.227',
-//     port: 3306,
-//     user: 'root',
-//     password: '0000',
-//     // database: 'my_db'
-// };
+const conn = {  // mysql 접속 설정
+    host: '13.125.66.227',
+    port: 3306,
+    // user: 'root',
+    // password: '0000',
+    // database: 'my_db'
+};
 
 
 // var connection = mysql.createConnection(conn); // DB 커넥션 생성
