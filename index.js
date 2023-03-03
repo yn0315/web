@@ -161,20 +161,20 @@ app.get('/', function (req, res) {
 // });
 
 app.get('/map', function (req, res) {
-    // fs.readFile(__dirname+ '/public/map.html', function (error, data) {
-    //     if (error) {
-    //         console.log(error);
-    //     } else {
-    //         res.writeHead(200, { 'Content-Type': 'text/html' });
+    fs.readFile(__dirname+ '/public/map.html', function (error, data) {
+        if (error) {
+            console.log(error);
+        } else {
+            res.writeHead(200, { 'Content-Type': 'text/html' });
 
-    //         res.end(data);
-    //     }
-    // });
+            res.end(data);
+        }
+    });
     // const filePath = 'map.html';
     // console.log(filePath);
     // res.sendFile(filePath);
     // res.sendFile('./public/map.html');
-    res.redirect(__dirname + '/public/map.html');
+    // res.redirect(__dirname + '/public/map.html');
     
     
 });
