@@ -250,7 +250,7 @@ app.post('/submit', function (req, res) {
             //     }
             // });
             res.header('Content-Type','text/plain');
-            res.end('200');
+            res.end('/');
             
 
         }
