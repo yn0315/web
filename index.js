@@ -247,8 +247,6 @@ app.post('/submit', function (req, res) {
                     console.log(error);
                 } else {
                     res.writeHead(200, { 'Content-Type': 'text/html' });
-        
-                    res.end(data);
                 }
             });
             res.end();
