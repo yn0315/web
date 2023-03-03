@@ -54,8 +54,8 @@ const conn = {  // mysql 접속 설정
 // };
 
 
-// var connection = mysql.createConnection(conn); // DB 커넥션 생성
-// connection.connect();   // DB 접속
+var connection = mysql.createConnection(conn); // DB 커넥션 생성
+connection.connect();   // DB 접속
 
 // var router = express.Router();
 
