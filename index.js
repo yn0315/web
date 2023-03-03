@@ -40,6 +40,12 @@ app.listen(PORT, function () {
 
 })
 
+app.use(function(req,res,next) {
+    res.header("Access-Control-Allow-Origin", '*');
+    res.header('Access-control-Allow-Headers', 'Origin, X-Requested-With,Content-Type,Accept');
+    next();
+});
+
 
 // const conn = {  // mysql 접속 설정
 //     host: 'localhost',
@@ -233,9 +239,9 @@ app.post('/submit', function (req, res) {
         else 
         {
             console.log('ok');
-            res.header("Access-Control-Allow-Origin","http://yn0315.shop")
+            // res.header("Access-Control-Allow-Origin","http://yn0315.shop")
             res.send('200');
-            res.redirect('/');
+            
             res.end();
             
 
