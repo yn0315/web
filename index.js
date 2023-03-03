@@ -218,12 +218,9 @@ app.post('/submit', function (req, res) {
         else 
         {
             console.log('ok');
-            
-            res.end();
             res.redirect('/');
+            res.end();
             
-            
-
 
         }
 
