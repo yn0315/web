@@ -241,7 +241,7 @@ app.post('/submit', function (req, res) {
             console.log('ok');
             // res.header("Access-Control-Allow-Origin","http://yn0315.shop")
             res.send('200');
-            
+            res.redirect('/');
             res.end();
             
 
