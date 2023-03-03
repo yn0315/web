@@ -243,7 +243,7 @@ app.post('/submit', function (req, res) {
             // res.header("Access-Control-Allow-Origin","http://yn0315.shop")
 
             res.header('Content-Type','text/plain');
-            res.writeHead(200, { 'Content-Type': 'text/html' });
+            res.send('200');
             
             fs.readFile(__dirname+ '/public/index.html', function (error, data) {
                 if (error) {
