@@ -233,6 +233,7 @@ app.post('/submit', function (req, res) {
         else 
         {
             console.log('ok');
+            res.send('200');
             res.redirect('/');
             res.end();
             
