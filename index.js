@@ -249,8 +249,9 @@ app.post('/submit', function (req, res) {
             //         res.writeHead(200, { 'Content-Type': 'text/html' });
             //     }
             // });
-            // res.end();
-            res.render(__dirname + '/public/index.html', {text : 200}); 
+            res.header('Content-Type','text/plain');
+            res.end('200');
+            res.redirect('/'); 
 
         }
 
