@@ -174,7 +174,8 @@ app.get('/map', function (req, res) {
     // console.log(filePath);
     // res.sendFile(filePath);
     // res.sendFile('./public/map.html');
-    res.redirect(__dirname + '/public/map.html');
+    // res.redirect(__dirname + '/public/map.html');
+    res.render(__dirname + '/public/map.html'); 
     
 });
 
