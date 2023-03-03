@@ -23,6 +23,9 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 
+const corsOptions = {
+    origin: 'http://yn0315.shop'
+  };
 app.listen(PORT, function () {
     console.log('server Start.')
 
