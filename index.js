@@ -11,6 +11,7 @@ const morgan = require('morgan');
 const indexRouter = require('./routes');
 const mapRouter = require('./routes/map');
 const { Post } = require('./routes');
+const cors = require('cors');
 // const options = {
 //     key: fs.readFileSync('/path/to/private.key'),
 //     cert: fs.readFileSync('/path/to/certificate.crt'),
@@ -19,6 +20,8 @@ const { Post } = require('./routes');
 app.use((morgan('dev')));
 
 const PORT = process.env.PORT || 3000;
+
+app.use(cors());
 
 app.listen(PORT, function () {
     console.log('server Start.')
