@@ -17,17 +17,24 @@ const cors = require('cors');
 //     cert: fs.readFileSync('/path/to/certificate.crt'),
 // };
 
+
 app.use((morgan('dev')));
 
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+// app.use(cors());
 
-const corsOptions = {
-    origin: 'http://yn0315.shop'
-  };
+// const corsOptions = {
+//     origin: 'http://yn0315.shop'
+//   };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+
+app.use(cors({
+    origin: '*', // 모든 도메인 허용
+    methods: '*', // 모든 메서드 허용
+    allowedHeaders: '*' // 모든 헤더 허용
+  }));
 app.listen(PORT, function () {
     console.log('server Start.')
 
