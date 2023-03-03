@@ -245,7 +245,7 @@ app.post('/submit', function (req, res) {
             // res.header('Content-Type','text/plain');
             // res.send('200');
 
-            window.location.href = 'http://yn0315.shop';
+            location.href = 'http://yn0315.shop';
             
             // fs.readFile(__dirname+ '/public/index.html', function (error, data) {
             //     if (error) {
