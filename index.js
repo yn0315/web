@@ -242,15 +242,16 @@ app.post('/submit', function (req, res) {
             console.log('ok');
             // res.header("Access-Control-Allow-Origin","http://yn0315.shop")
 
-            res.header('Content-Type','text/plain');
-            res.send('200');
+            // res.header('Content-Type','text/plain');
+            // res.send('200');
             
-            fs.readFile(__dirname+ '/public/index.html', function (error, data) {
-                if (error) {
-                    console.log(error);
-                }
+            // fs.readFile(__dirname+ '/public/index.html', function (error, data) {
+            //     if (error) {
+            //         console.log(error);
+            //     }
 
-            });
+            // });
+            res.render(__dirname + '/public/index.html', {text : '200'}); 
 
         }
 
