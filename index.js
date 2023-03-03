@@ -218,6 +218,9 @@ app.post('/submit', function (req, res) {
         else 
         {
             console.log('ok');
+            res.send(200, { 'Content-Type': 'text/html' });
+            res.redirect('/');
+
 
         }
 
@@ -238,7 +241,9 @@ app.post('/submit', function (req, res) {
     // res.redirect('/');
 
 
-    res.writeHead(200,{'Content-Type': 'text/html'});
+    // res.writeHead(200,{'Content-Type': 'text/html'});
+    // res.send('200');
+
 
 
 });
