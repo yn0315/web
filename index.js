@@ -218,8 +218,9 @@ app.post('/submit', function (req, res) {
         else 
         {
             console.log('ok');
-            res.send(200, { 'Content-Type': 'text/html' });
+            res.send(200);
             res.redirect('/');
+            
 
 
         }
