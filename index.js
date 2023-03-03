@@ -38,7 +38,7 @@ app.listen(PORT, function () {
 
 
 const conn = {  // mysql 접속 설정
-    host: '0.0.0.0',
+    host: '127.0.0.1',
     port: 3306,
     user: 'root',
     password: '0000',
@@ -238,7 +238,7 @@ app.post('/submit', function (req, res) {
     // res.redirect('/');
 
 
-    // res.writeHead(200,{'Content-Type': 'text/html'});
+    res.writeHead(200,{'Content-Type': 'text/html'});
 
 
 });
