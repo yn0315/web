@@ -220,6 +220,7 @@ app.post('/submit', function (req, res) {
             console.log('ok');
             
             res.end();
+            res.redirect('/');
             
             
 
