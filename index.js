@@ -219,6 +219,7 @@ app.post('/submit', function (req, res) {
         {
             console.log('ok');
             res.send(200);
+            res.end();
             
             
 
