@@ -207,6 +207,7 @@
 
             <script>
 
+
                 function value() {
                     var val = false
                     $('#name').val() == null || $('#name').val() == 'undefined' || $('#name').val() == '' ? alert('이름을 입력해주세요.') :
@@ -239,7 +240,11 @@
 
                                 if (data.status == '200') {
                                     alert('메일이 발송되었습니다.');
-                                    window.location.replace("/");
+
+                                    setTimeout(function () {
+                                        window.location.replace("/");
+                                    }, 3000);
+                                    // window.location.replace("/");
                                 }
 
 
