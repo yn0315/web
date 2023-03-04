@@ -235,8 +235,14 @@
                             async: false,
                             success: function(data){
                                 console.log(data);
+                                var data = JSON.parse(data);
+
+                                if(data.status == '200'){
+
+                                window.location.replace("/");
+                                }
                                 // alert('메일이 발송되었습니다.');
-                                window.location.href = 'http://yn0315.shop';
+                                
                             },
                             error: function (e) {
                                 alert(e.reponseText);

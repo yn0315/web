@@ -246,7 +246,7 @@ app.post('/submit', function (req, res) {
             // res.send('200');
 
             // location.href = 'http://yn0315.shop';
-            res.redirect('/');
+            // res.redirect('/');
             
             // fs.readFile(__dirname+ '/public/index.html', function (error, data) {
             //     if (error) {
@@ -254,6 +254,18 @@ app.post('/submit', function (req, res) {
             //     }
 
             // });
+
+            var status = {
+
+                "status": 200,
+            
+                "message": 'login success'
+            
+              }
+            
+              res.end(JSON.stringify(status));
+            
+            }
 
 
         }
