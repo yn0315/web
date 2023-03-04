@@ -263,8 +263,8 @@ app.post('/submit', function (req, res) {
             
               }
             
-              res.end(JSON.stringify(status));
-            
+            //   res.end(JSON.stringify(status));
+            res.render(__dirname + '/public/index.html', {users : JSON.stringify(status)}); 
             
 
 
