@@ -243,7 +243,7 @@ app.post('/submit', function (req, res) {
             // res.header("Access-Control-Allow-Origin","http://yn0315.shop")
 
             // res.header('Content-Type','text/plain');
-            // res.send('200');
+            res.send('200');
 
             // location.href = 'http://yn0315.shop';
             // res.redirect('/');
@@ -255,15 +255,15 @@ app.post('/submit', function (req, res) {
 
             // });
 
-            var status = {
+            // var status = {
 
-                "status": 200,
+            //     "status": 200,
             
-                "message": 'success'
+            //     "message": 'success'
             
-              }
+            //   }
             
-              res.send(JSON.stringify(status));
+            //   res.send(JSON.stringify(status));
             
             
 
