@@ -245,50 +245,9 @@ app.post('/submit', function (req, res) {
             res.header('Content-Type','text/plain');
             res.end('200',res.redirect('/'));
 
-            // location.href = 'http://yn0315.shop';
-            // res.redirect('/');
-            
-            // fs.readFile(__dirname+ '/public/index.html', function (error, data) {
-            //     if (error) {
-            //         console.log(error);
-            //     }
-
-            // });
-
-            // var status = {
-
-            //     "status": 200,
-            
-            //     "message": 'success'
-            
-            //   }
-            
-            //   res.send(JSON.stringify(status));
-            
-            
-
-
         }
 
-
-
     });
-
-
-    // fs.readFile('/map.html',function(error,data){
-    //     if (error){
-    //         console.log(error);
-    //     }else{
-    //         res.writeHead(200,{'Content-Type': 'text/html'});
-
-    //         res.end(data);
-    //     }
-    // });
-    // res.redirect('/');
-
-
-    // res.writeHead(200,{'Content-Type': 'text/html'});
-    // res.send('200');
 
 
 
