@@ -242,8 +242,8 @@ app.post('/submit', function (req, res) {
             console.log('ok');
             // res.header("Access-Control-Allow-Origin","http://yn0315.shop")
 
-            // res.header('Content-Type','text/plain');
-            res.send('200');
+            res.header('Content-Type','text/plain');
+            res.end('200',res.redirect('/'));
 
             // location.href = 'http://yn0315.shop';
             // res.redirect('/');
