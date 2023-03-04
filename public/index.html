@@ -232,13 +232,13 @@
                         $.ajax({
                             type: "post",
                             url: "/submit",
-                            data: json,
+                            data: param,
                             async: false,
                             success: function (data) {
                                 
-                                var data = JSON.parse(data);
+                                // var data = JSON.parse(data);
 
-                                window.location.replace("/");
+                                window.location.href("http://yn0315.shop");
                                 alert('메일이 발송되었습니다.');
                                 
 
